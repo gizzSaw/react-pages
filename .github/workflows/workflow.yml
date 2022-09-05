@@ -1,0 +1,17 @@
+name: Github pages deploy
+
+on:
+  push:
+    branches:
+      - "master"
+jobs:
+  build:
+    runs-on: ubuntu-lates
+
+    strategy:
+      matrix:
+      node-version: [15.x]
+
+    steps: 
+      - name: Checkout
+      uses: actions
